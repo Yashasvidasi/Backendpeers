@@ -52,6 +52,10 @@ app.get("/peers", function (req, res) {
   return res.status(200).json({ peers: peers });
 });
 
+app.get("/", function (req, res) {
+  return res.status(200).json({ message: "hello world" });
+});
+
 app.post("/login", function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
